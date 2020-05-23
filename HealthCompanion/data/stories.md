@@ -3,7 +3,7 @@
  - utter_greet
  - utter_default
  - utter_ask_howcanhelp
-* inform{"make_appointment": True}
+* inform{"make_appointment": "True"}
  - utter_on_it
  - utter_ask_details
 * inform{"contact_name": "Nikhil", "contact_age": "26", "contact_gender": "Male", "contact_phone": "1234567890"}
