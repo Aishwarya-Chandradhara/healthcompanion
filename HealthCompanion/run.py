@@ -6,7 +6,7 @@ from typing import Text
 import os
 import rasa.utils.io
 import rasa.train
-from examples.restaurantbot.policy import RestaurantPolicy
+from .RestaurantPolicy import RestaurantPolicy
 from rasa.core.agent import Agent
 from rasa.core.policies.memoization import MemoizationPolicy
 from rasa.core.policies.mapping_policy import MappingPolicy
@@ -81,7 +81,7 @@ def train_nlu(
 if __name__ == "__main__":
     rasa.utils.io.configure_colored_logging(loglevel="INFO")
 
-    parser = argparse.ArgumentParser(description="Restaurant Bot")
+    parser = argparse.ArgumentParser(description="Health Companion Bot")
 
     subparser = parser.add_subparsers(dest="subparser_name")
     train_parser = subparser.add_parser("train", help="train a core or nlu model")
