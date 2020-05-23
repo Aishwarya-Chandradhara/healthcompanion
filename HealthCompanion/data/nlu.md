@@ -58,21 +58,6 @@
 - i want to go to a pharmacy
 - is there a pharmacy nearby
 
-## intent:check_availability
-- when is it available?
-- is it free
-- when will it be available
-- can you tell me when is there a free time slot
-- what time would be better
-- what time would be appropriate
-- what time is free
-- when will there be appointments
-- when are the appointments going to be available
-- what would be a free time slot
-- can i make an appointment on the [10.02](time) 
-- is the [23.01](time) free for an appointment
-
-
 ## intent:deny
 - no
 - no thanks
@@ -162,27 +147,40 @@
 - i come from [Germany](contact_location)
 
 ## intent:request_info
-- do you have their [address](institution_address)
-- do you have its [phone number](institution_phone)
-- can i have their [phone number](institution_phone)
-- what is the [phone number](institution_phone) of the [hospital](institution_type)
-- what is their [address](institution_address)
-- may i have the [address](institution_address) of the [pharmacy](institution_type)
-- whats their [address](institution_address)
-- do you have their [phone number](phone_number_institution)
-- give me their [phone number](phone_number_institution)
-- whats their [phone number](phone_number_institution)
-- do you have its [address](institution_address)
-- may i have the [phone number](institution_phone) of the [doctor](institution_type)
-- what is their [phone number](institution_phone)
-- give me their [address](institution_address)
-- can i have their [address](institution_address)
-- what is the [address](institution_address) of the [clinic](institution_type)
-- what is the [name](institution_name) of the [clinic](institution_type)
-- can you tell me the [appointment status](appointment_status)
-- what is the [status](appointment_status)
-- what are my [results](diagnoses_results)
-- what is my [diagnosis](diagnoses_results)
+- do you have their adress
+- do you have their phone number
+- can i have their phone number
+- what is the phone number of the hospital
+- what is their adress
+- may i have the address of the pharmacy
+- whats their address
+- do you have their number
+- give me their number
+- give me the adress
+- give me the number
+- whats their phone
+- do you have its address
+- may i have the phone number of the doctor
+- what is their phone number
+- give me their address
+- can i have their adress
+- what is the address of the clinic
+- what is the name of the clinic
+- what is the status
+- what are my results
+- what is my diagnoses
+- when is it available?
+- is it free
+- when will it be available
+- can you tell me when is there a free time slot
+- what time would be better
+- what time would be appropriate
+- what time is free
+- when will there be appointments
+- when are the appointments going to be available
+- what would be a free time slot
+- can i make an appointment on the 10th of Feb
+- is the 23.01 free for an appointment
 
 ## intent:thankyou
 - um thank you good bye
