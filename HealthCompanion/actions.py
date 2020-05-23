@@ -2,9 +2,10 @@ from rasa_sdk import Action
 from rasa_sdk.events import SlotSet
 
 
-def search(institution_type, contact_location):
+def search(institution_type, contact_location, dispatcher):
     """
     Suggest a pharmacy in the proximity to contact_location
+    :param dispatcher:
     :param institution_type:
     :param contact_location:
     :return:
@@ -13,6 +14,10 @@ def search(institution_type, contact_location):
         institution_name = "City Pharmacy"
         institution_address = "City Strasse, Paderborn"
         institution_phone = "12323457890"
+        dispatcher.utter_message(text="Found a {} named {} on {}. The contact number is {}".format(institution_type,
+                                                                                                   institution_name,
+                                                                                                   institution_address,
+                                                                                                   institution_phone))
         return [SlotSet("institution_name", institution_name),
                 SlotSet("institution_address", institution_address),
                 SlotSet("institution_phone", institution_phone)]
@@ -21,14 +26,20 @@ def search(institution_type, contact_location):
         institution_name = "City Hospital"
         institution_address = "City Strasse, Paderborn"
         institution_phone = "12332227890"
+        dispatcher.utter_message(text="Found a {} named {} on {}. The contact number is {}".format(institution_type,
+                                                                                                   institution_name,
+                                                                                                   institution_address,
+                                                                                                   institution_phone))
         return [SlotSet("institution_name", institution_name),
                 SlotSet("institution_address", institution_address),
                 SlotSet("institution_phone", institution_phone)]
 
 
-def make_appointment(institution_name, contact_name, contact_age, contact_phone, contact_gender, date, time):
+def make_appointment(institution_name, contact_name, contact_age, contact_phone, contact_gender, date, time,
+                     dispatcher):
     """
     Make appointment in the given hospital for the contact.
+    :param dispatcher:
     :param institution_name:
     :param contact_name:
     :param contact_age:
@@ -38,15 +49,17 @@ def make_appointment(institution_name, contact_name, contact_age, contact_phone,
     :param time:
     :return:
     """
-    appointment_status = "pending"
-
+    appointment_status = "approved"
+    dispatcher.utter_message(text="Appointment done for {} in {} for {} {}".format(contact_name,
+                                                                                   institution_name, date, time))
     # make a call to some API to actually book the appointment.
-    return [SlotSet("institution_name", appointment_status)]
+    return [SlotSet("appointment_status", appointment_status)]
 
 
-def diagnose_symptoms(symptom1, symptom2=None, symptom3=None, allergies=None):
+def diagnose_symptoms(symptom1, symptom2=None, symptom3=None, allergies=None, dispatcher=None):
     """
     Diagnose symptoms and suggest what might be wrong
+    :param dispatcher:
     :param symptom1:
     :param symptom2:
     :param symptom3:
@@ -56,42 +69,54 @@ def diagnose_symptoms(symptom1, symptom2=None, symptom3=None, allergies=None):
     # symptom1 can't be empty or None
     flu_symptoms = [None, "Headache", "Fever", "Chills", "Cough", "Sore Throat", "Runny Nose", "Fatigue"]
     diarrhea_symptoms = [None, "Nausea", "Bloating", "Loose stools", "Abdominal pain", "Abdominal cramps"]
+    diagnosis_results = "I am not sure. Please see a doctor!"
 
-    if symptom1 in flu_symptoms and symptom2 in flu_symptoms and symptom3 in flu_symptoms:
+    if symptom1 in flu_symptoms[1:] and symptom2 in flu_symptoms and symptom3 in flu_symptoms:
         diagnosis_results = "Looks like Flu to me"
-    if symptom1 in diarrhea_symptoms and symptom2 in diarrhea_symptoms and symptom3 in diarrhea_symptoms:
+    elif symptom1 in diarrhea_symptoms[1:] and symptom2 in diarrhea_symptoms and symptom3 in diarrhea_symptoms:
         diagnosis_results = "It looks like you have got Diarrhea"
-
+    dispatcher.utter_message(text="{}".format(diagnosis_results))
     return [SlotSet("diagnosis_results", diagnosis_results)]
 
 
-class ActionSearchPharmacy(Action):
+def greet_user(contact_gender, contact_name):
+    attribute = "handsome" if contact_gender == "Male" else "beautiful"
+    if contact_gender == "Male":
+        return "Hi {}, Good day! You look {} as ever.".format(contact_name, attribute)
+
+
+class ActionSearchInstitution(Action):
     def name(self):
-        return "action_search_pharmacy"
+        return "action_search_institution"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message(text="looking for a pharmacy near you")
-        ge_api = GE_API()
-        pharmacy = ge_api.search(tracker.get_slot("location_institution"))
-        return [SlotSet("location_institution", pharmacy)]
+        institution_type = tracker.get_slot("institution_type")
+        contact_location = tracker.get_slot("contact_location")
+
+        dispatcher.utter_message(text="Looking for a {} near you!".format(institution_type))
+
+        search(institution_type, contact_location, dispatcher)
+        return []
 
 
-class ActionSearchClinic(Action):
+class ActionMakeAppointment(Action):
     def name(self):
-        return "action_search_doctor"
+        return "action_make_appointment"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message(text="looking for a doctor near you")
-        ge_api = GE_API()
-        clinic = ge_api.search(tracker.get_slot("pharmacy"))
-        return [SlotSet("location_institution", clinic)]
+        contact_name = tracker.get_slot("contact_name")
+        contact_age = tracker.get_slot("contact_age")
+        contact_gender = tracker.get_slot("contact_gender")
+        contact_phone = tracker.get_slot("contact_phone")
+        institution_name = tracker.get_slot("institution_name")
+        date = tracker.get_slot("date")
+        time = tracker.get_slot("time")
 
+        dispatcher.utter_message(text="Making an appointment for you!")
 
-class ActionAppointment(Action):
-    def name(self):
-        return "action_appointment"
-
-    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        make_appointment(institution_name, contact_name, contact_age, contact_phone,
+                         contact_gender, date, time, dispatcher)
+        return []
 
 
 class ActionAnalyseSymptoms(Action):
@@ -110,7 +135,7 @@ class ActionAnalyseSymptoms(Action):
         dispatcher.utter_messege(text="you might have")
         dispatcher.utter_messege(text=output)
         dispatcher.utter_messege(
-            text="However, we still highly recommend that you go visit a specialist. As we are not legally allowed to give diagnoses."
+            text="However, we still highly recommend that you go visit a specialist. As we are not legally allowed to give diagnoses")
         return []
 
 
