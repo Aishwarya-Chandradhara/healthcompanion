@@ -64,7 +64,7 @@ intents:
  - request_info
  - make_appointment
  - get_diagnose
- - search_instituion
+ - search_institution
 
 responses:
   utter_greet:
