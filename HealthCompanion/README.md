@@ -19,7 +19,7 @@ assistant on your local machine. The `HCBot` consists of the following files:
 
 ## How to use this example?
 
-To train your restaurant bot, execute
+To train your HealthCompanion bot, execute
 ```
 rasa train
 ```
