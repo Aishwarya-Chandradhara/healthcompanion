@@ -14,7 +14,7 @@
  - utter_ask_location
 * inform{"contact_location":"Paderborn"}
  - utter_on_it
- - utter_askdate_and_time
+ - utter_ask_date_and_time
 * inform{"date":"28 May", "time": "10 AM"}
  - utter_on_it
  - utter_ask_moreupdates
