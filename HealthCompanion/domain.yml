@@ -142,7 +142,7 @@ responses:
     - text: "Doing it right now."
     - text: "I will do this right away!"
     - text: "I am performing the requested information at the moment. Please be patient."
-   utter_request_info_institution:
+   utter_give_info_institution:
     - text: "It's a {institution_type}, the adress is {institut_adress}, and their phone number is {institution_phone}"
 
 actions:
