@@ -6,7 +6,7 @@ from typing import Text
 import os
 import rasa.utils.io
 import rasa.train
-from .RestaurantPolicy import RestaurantPolicy
+from .policy import HealthCompanionPolicy
 from rasa.core.agent import Agent
 from rasa.core.policies.memoization import MemoizationPolicy
 from rasa.core.policies.mapping_policy import MappingPolicy
