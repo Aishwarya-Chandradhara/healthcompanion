@@ -33,6 +33,8 @@ slots:
     type: text
   diagnosis_results:
     type: text
+  greeting:
+    type: text
 
 entities:
 - contact_location
@@ -51,6 +53,7 @@ entities:
 - institution_name
 - appointment_status
 - diagnosis_results
+- greeting
 
 intents:
  - greet
