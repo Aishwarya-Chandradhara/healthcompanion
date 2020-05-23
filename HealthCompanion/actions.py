@@ -59,7 +59,8 @@ class ActionAnalyseSymptoms(Action):
         dispatcher.utter_messege(text = "you might have")
         dispatcher.utter_messege(text = output)
         dispatcher.utter_messege(text = "However, we still highly recommend that you go visit a specialist. As we are not legally allowed to give diagnoses."
-        
+        return []
+                                 
 class ActionGreetUser(Action):
     """Greets the user using his name"""
 
