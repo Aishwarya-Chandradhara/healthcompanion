@@ -41,9 +41,24 @@ class ActionAppointment(Action):
     def name(self):
         return "action_appointment"
 
-    def run(self, date_and_time, contact_name, contact_age, ):
+    def run(self, dispatcher, tracker, domain)-> List[EventType]:
         
-        
+class ActionAnalyseSymptoms(Action):
+    def name(self):
+        return "action_analyse_symptoms"
+    
+    def run(self, dispatcher, tracker, domain)-> List[EventType]:
+        # symptom1 = tracker.get_latest_entity_values("symptom1")
+        # symptom2 = tracker.get_latest_entity_values("symptom2")
+        # symptom3 = tracker.get_latest_entity_values("symptom3")
+        # analysis_inputs = [symptom1, symptom2, symptom3]
+        # outputs = analysis_tool(analysis_inputs)
+        output = "mild cold"
+        dispatcher.utter_messege(text = "well,")
+        dispatcher.utter_messege(text = tracker.get_latest_entity_values("contact_name"))
+        dispatcher.utter_messege(text = "you might have")
+        dispatcher.utter_messege(text = output)
+        dispatcher.utter_messege(text = "However, we still highly recommend that you go visit a specialist. As we are not legally allowed to give diagnoses."
         
 class ActionGreetUser(Action):
     """Greets the user using his name"""
