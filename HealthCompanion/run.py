@@ -35,7 +35,7 @@ async def train_core(
     agent = Agent(
         domain_file,
         policies=[
-            MemorizationPolicy(max_history=3),
+            MemoizationPolicy(max_history=3),
             MappingPolicy(),
             HealthCompanionPolicy(batch_size=100, epochs=100, validation_split=0.2),
         ],
