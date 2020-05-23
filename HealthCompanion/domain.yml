@@ -93,7 +93,7 @@ responses:
     - text: "ok let me see what else there is"
     - text: "May I interest you in some other alternatives??"
   utter_ack_makeappointment:
-    - text: "ok making an appointment for an institution= ({institution_name}) in location={institution_adress} for time slot={time} ; {date}? "
+    - text: "ok making an appointment for an institution= ({institution_name}) in location={institution_address} for time slot={time} ; {date}? "
       buttons:
         - title: "thank you"
           payload: "thank you"
@@ -113,7 +113,7 @@ responses:
     - text: "where exactly?"
     - text: "At what location?"
   utter_ask_moreupdates:
-    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {institution_adress}, {institution_name}, {time} {date}."
+    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {institution_address}, {institution_name}, {time} {date}."
   utter_ask_date_and_time:
     - text: "What day and time?"
     - text: "When?"
@@ -145,7 +145,7 @@ responses:
     - text: "I will do this right away!"
     - text: "I am performing the requested information at the moment. Please be patient."
    utter_give_info_institution:
-    - text: "It's a {institution_type}, the adress is {institut_adress}, and their phone number is {institution_phone} and it is {appointment_status}"
+    - text: "It's a {institution_type}, the address is {institut_address}, and their phone number is {institution_phone} and it is {appointment_status}"
 
 
 actions:
