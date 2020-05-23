@@ -40,3 +40,20 @@ class ActionAppointment(Action):
         return "action_appointment"
 
     def run(self, date_and_time, contact_name, contact_age, ):
+        
+        
+        
+class ActionGreetUser(Action):
+    """Greets the user with/without privacy policy"""
+
+    def name(self) -> Text:
+        return "action_greet_user"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        intent = tracker.latest_message["intent"].get("contact_name")
+        #shown_privacy = tracker.get_slot("shown_privacy")
+        name_entity = next(tracker.get_latest_entity_values("contact_name"), None)
+        dispatcher.utter_message(text="hey ")
+        dispatcher.utter_message(text=name_entity)
+        dispatcher.utter_message(text=", we are friends already")
+        return []        
