@@ -31,6 +31,8 @@ slots:
     type: text  
   appointment_status:
     type: text
+  diagnosis_results:
+    type: text
 
 entities:
 - contact_location
@@ -49,6 +51,7 @@ entities:
 - institution_phone
 - institution_name
 - appointment_status
+- diagnosis_results
 
 intents:
  - greet
