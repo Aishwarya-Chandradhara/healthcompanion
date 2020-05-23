@@ -10,9 +10,9 @@ pipeline:
   - name: "EntitySynonymMapper"
 
 policies:
-  - name: "HealthCompanionPolicy"
+  - name: "RestaurantPolicy"
     batch_size: 100
     epochs: 100
     validation_split: 0.2
-  - name: MemorizationPolicy
+  - name: MemoizationPolicy
   - name: MappingPolicy
