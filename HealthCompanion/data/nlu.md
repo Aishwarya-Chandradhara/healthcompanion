@@ -120,19 +120,19 @@
 - do you have their [address](address_institution)
 - do you have its [phone number](phone_number_institution)
 - can i have their [phone number](phone_number_institution)
-- what is the [phone number](phone_number_institution) of the restaurant
+- what is the [phone number](phone_number_institution) of the [hospital](institution_type)
 - what is their [address](address_institution)
-- may i have the [address](address_institution) of the restaurant
+- may i have the [address](address_institution) of the [pharmacy](institution_type)
 - whats their [address](address_institution)
 - do you have their [phone number](phone_number_institution)
 - give me their [phone number](phone_number_institution)
 - whats their [phone number](phone_number_institution)
 - do you have its [address](address_institution)
-- may i have the [phone number](phone_number_institution) of the restaurant
+- may i have the [phone number](phone_number_institution) of the [doctor](institution_type)
 - what is their [phone number](phone_number_institution)
 - give me their [address](address_institution)
 - can i have their [address](address_institution)
-- what is the [address](address_institution) of the restaurant
+- what is the [address](address_institution) of the [clinic](institution_type)
 
 ## intent:thankyou
 - um thank you good bye
