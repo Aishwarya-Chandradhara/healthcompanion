@@ -47,7 +47,7 @@
 ## story_00000002
 * greet
  - utter_greet
- - utter_howcanhelp
+ - utter_ask_howcanhelp
 * make_appointment
  - utter_ask_date_and_time
 * inform{"date":"25.03", "time":"2pm"}
@@ -126,7 +126,7 @@
 ## story_00000005
 * greet
  - utter_greet
- - utter_howcanhelp
+ - utter_ask_howcanhelp
 * search_institution
  -  utter_ask_institution
 * inform{"institution_type":"pharmacy"}
