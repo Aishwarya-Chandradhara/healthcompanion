@@ -59,6 +59,13 @@ responses:
       text: "How old were you, again?"
     - 
       text: "Maybe I forgot your age. How old were you again?"
+  utter_ask_symptoms: 
+    - 
+      text: "What are your symptoms?"
+    - 
+      text: "What kind of symptoms are apparent?"
+    - 
+      text: "Can you provide 1 to 3 symptoms for your condition?"
   utter_ask_date_and_time: 
     - 
       text: "What day and time?"
