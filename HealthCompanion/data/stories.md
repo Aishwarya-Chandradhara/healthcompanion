@@ -2,17 +2,20 @@
 * greet
  - utter_greet
  - utter_default
- - utter_ask_name
-* inform{"contact_name":"nikhil"}
- - utter_on_it
  - utter_ask_howcanhelp
+* inform{"make_appointment": True}
+ - utter_on_it
+ - utter_ask_details
+* inform{"contact_name": "Nikhil", "contact_age": "26", "contact_gender": "Male", "contact_phone": "1234567890"}
+ - utter_on_it
+ - utter_ask_institution
 * inform{"institution_type":"hospital"}
  - utter_on_it
  - utter_ask_location
 * inform{"location_institution":"Paderborn"}
  - utter_on_it
  - utter_askdate_and_time
-* inform{"date_and_time":"28 May at 10 AM"}
+* inform{"date":"28 May", "time": "10 AM"}
  - utter_on_it
  - utter_ask_moreupdates
 * deny
