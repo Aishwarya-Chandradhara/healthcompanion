@@ -58,11 +58,35 @@
 * inform{"contact_location":"Aachen"}
  - utter_ask_institution
 * inform{"institution_type":"pharmacy"}
- - utter_on_it
+ - utter_ack_makeappointment
  - action_search_institution
  - action_make_appointment
 * affirm
 * request_info
  - utter_give_info_institution
 * affirm
+ - utter_goodbye
+
+## story_00000004
+* greet
+ - action_greet_user
+ - utter_ask_howcanhelp
+* make_appointment
+ - utter_on_it
+ - utter_ask_details
+* inform{"contact_name": "Peter", "contact_age": "50", "contact_gender": "man", "contact_phone": "4223124555"}
+ - utter_ask_institution
+* inform{"institution_type":"clinic"}
+ - utter_ask_location
+* inform{"contact_location":"Berlin"}
+ - utter_on_it
+ - utter_askdate_and_time
+* inform{"date":"13 Sep", "time": "09:30"}
+ - utter_on_it
+ - utter_ask_moreupdates
+* deny
+ - utter_ack_makeappointment
+ - utter_ack_dosearch
+ - action_make_appointment
+* thankyou
  - utter_goodbye
