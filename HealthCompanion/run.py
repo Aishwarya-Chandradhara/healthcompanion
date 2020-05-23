@@ -6,7 +6,7 @@ from typing import Text
 import os
 import rasa.utils.io
 import rasa.train
-from .policy import HealthCompanionPolicy
+from .policy import RestaurantPolicy
 from rasa.core.agent import Agent
 from rasa.core.policies.memoization import MemoizationPolicy
 from rasa.core.policies.mapping_policy import MappingPolicy
@@ -37,7 +37,7 @@ async def train_core(
         policies=[
             MemoizationPolicy(max_history=3),
             MappingPolicy(),
-            HealthCompanionPolicy(batch_size=100, epochs=100, validation_split=0.2),
+            RestaurantPolicy(batch_size=100, epochs=100, validation_split=0.2),
         ],
     )
 
