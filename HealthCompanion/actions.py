@@ -3,19 +3,25 @@ from rasa_sdk.events import SlotSet
 
 
 class GE_API:
-    def search(self, institution_type, contact_location):
+    def search(self, institution_type, institution_location, contact_location, time=None, date=None, ):
         
-        app_start = "ExampleAvailableTimeSlot"  #Appointment.start
-        app_status = "ExampleAppointmentStatus" #Appointment.status
-        app_patient_status = "ExampleAccepted" #Appointment.patient.status
+        appointment_time = time  #Appointment.start
+        appointment_status = "pending" #Appointment.status
         
         if institution_type= "pharmacy":
-            loc = "Example Pharmacy Adress"     #location.adress['description']
-                                                #Appointment.status = "proposed"
-        else:  
-            loc = "Example Clinic or Hospital Adress"        
-
-        return [SlotSet("location_institution", loc), SlotSet("date", app_start)]
+            # suggest a pharmacy in the proximity to contact_location
+            institution_name = "City Pharmacy"
+            appointment_status = "not needed"
+            institution_address = "City Strasse, Paderborn"
+            institution_phone = "12323457890"
+            return [SlotSet("institution_name", institution_name), SlotSet("institution_address", institution_address), SlotSet("institution_phone", institution_phone), SlotSet("appointment_status", appointment_status)]
+        else:
+            # for all other institutions
+            institution_name = "City Hospital"
+            appointment_status = "pending"
+            institution_address = "City Strasse, Paderborn"
+            institution_phone = "12332227890"
+            return [SlotSet("institution_name", institution_name), SlotSet("institution_address", institution_address), SlotSet("institution_phone", institution_phone), SlotSet("appointment_status", appointment_status)]
 
 class ActionSearchPharmacy(Action):
     def name(self):
