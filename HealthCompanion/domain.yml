@@ -21,7 +21,8 @@ entities:
 - contact_age
 - contact_phone
 - contact_gender
-- date_and_time
+- date
+- time
 - allergy_status
 - symptom1
 - symptom2
@@ -59,6 +60,10 @@ responses:
     - text: "Isn't it great to have me at your assistance. How can I help you?"
   utter_diagnose:
     - text: " "
+  utter_ask_details:
+    - text: "Can you tell me your details?"
+    - text: "Please tell me you name, phone number, age and gender."
+    - text: "Please share your details."
   utter_ack_dosearch:
     - text: "ok let me see what I can find"
     - text: "Let me do my search and see what I find."
