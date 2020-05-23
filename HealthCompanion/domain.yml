@@ -13,8 +13,6 @@ slots:
     type: text
   time:
     type: text
-  allergies:
-    type: text
   symptom1:
     type: text
   symptom2:
