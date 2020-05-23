@@ -20,6 +20,7 @@ entities:
 - phone_number
 - allergy_status
 - symptom
+- institution_type
 
 intents:
  - greet
