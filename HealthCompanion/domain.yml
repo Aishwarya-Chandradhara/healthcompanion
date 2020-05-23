@@ -60,7 +60,6 @@ intents:
  - thankyou
  - request_info
  - make_appointment
- - check_availability
  - get_diagnose
 
 responses:
@@ -144,6 +143,7 @@ responses:
     - text: "I am performing the requested information at the moment. Please be patient."
    utter_give_info_institution:
     - text: "It's a {institution_type}, the adress is {institut_adress}, and their phone number is {institution_phone}"
+
 
 actions:
 - action_search_institution
