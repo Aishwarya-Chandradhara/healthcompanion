@@ -1,19 +1,32 @@
 slots:
+  contact_location:
+    type: text
+  contact_name:
+    type: text
+  contact_age:
+    type: text
+  contact_phone:
+    type: text
+  contact_gender:
+    type: text
+  date:
+    type: text
+  time:
+    type: text
+  symptom1:
+    type: text
+  symptom2:
+    type: text
+  symptom3:
+    type: text
   institution_type:
     type: text
-  symptom:
+  institution_address:
     type: text
-  location_institution:
+  institution_phone:
     type: text
-  location:
-    type: text
-  adress_institution:
-    type: text
-  phone_number_institution:
-    type: text
-  date_and_time:
-    type: text
-
+  institution_location:
+    type: text  
 
 entities:
 - contact_location
@@ -58,8 +71,6 @@ responses:
     - text: "I am your HealthCompanion and I love you!"
     - text: "This is your Health Companion and I am happy to help!"
     - text: "Isn't it great to have me at your assistance. How can I help you?"
-  utter_diagnose:
-    - text: " "
   utter_ask_details:
     - text: "Can you tell me your details?"
     - text: "Please tell me you name, phone number, age and gender."
