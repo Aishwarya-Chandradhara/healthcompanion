@@ -58,7 +58,7 @@ responses:
     - text: "ok let me see what else there is"
     - text: "May I interest you in some other alternatives??"
   utter_ack_makeappointment:
-    - text: "ok making an appointment for an institution (={type_of_institution}) visit cuisine={cuisine}) in location={location} for time slot={time_and_date}? "
+    - text: "ok making an appointment for an institution ({type_of_institution}) in location={location} for time slot={time_and_date}? "
       buttons:
         - title: "thank you"
           payload: "thank you"
