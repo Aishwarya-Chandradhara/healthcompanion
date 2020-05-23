@@ -51,14 +51,13 @@ def make_appointment(institution_name, contact_name, contact_age, contact_phone,
     return appointment_status
 
 
-def diagnose_symptoms(symptom1, symptom2=None, symptom3=None, allergies=None, dispatcher=None):
+def diagnose_symptoms(symptom1, symptom2=None, symptom3=None, dispatcher=None):
     """
     Diagnose symptoms and suggest what might be wrong.
     :param dispatcher:
     :param symptom1:
     :param symptom2:
     :param symptom3:
-    :param allergies:
     :return:
     """
     # symptom1 can't be empty or None
@@ -175,10 +174,9 @@ class ActionAnalyseSymptoms(Action):
         symptom1 = tracker.get_slot("symptom1")
         symptom2 = tracker.get_slot("symptom2")
         symptom3 = tracker.get_slot("symptom3")
-        allergies = tracker.get_slot("allergies")
         contact_name = tracker.get_slot("contact_name")
 
-        diagnosis_results = diagnose_symptoms(symptom1, symptom2, symptom3, allergies, dispatcher)
+        diagnosis_results = diagnose_symptoms(symptom1, symptom2, symptom3, dispatcher)
 
         dispatcher.utter_messege(text="Hey {}, {}".format(contact_name, diagnosis_results))
 
