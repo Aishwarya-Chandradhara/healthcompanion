@@ -113,11 +113,8 @@
 - my [stomach aches](symptom)
 - I have [shortness of breath](symptom)
 - i have a [skin rash](symptom) and a [fever](symptom)
-- 
+- Im feeling [dizzy](symptom).
 
-- im looking for a [moderately](price:moderate) priced restaurant in the [east](location) part of town
-- find [moderately](price:moderate) priced restaurant in the [west](location) part of town
-- can you make a restaurant reservation in a [cheap](price:lo) price range in [london](location) with [spanish](cuisine) food for [eight](people:8) people
 
 ## intent:request_info
 - do you have their [address](address_institution)
