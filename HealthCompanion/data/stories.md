@@ -53,7 +53,7 @@
 * inform{"date":"25.03", "time":"2pm"}
  - utter_on_it
  - utter_ask_details
-* inform{"contact_name": "John", "contact_age": "26", "contact_gender": "Male", "contact_phone": "445623167892"}]
+* inform{"contact_name": "Nikhil", "contact_age": "26", "contact_gender": "Male", "contact_phone": "1234567890"}
  - utter_ask_location
 * inform{"contact_location":"Aachen"}
  - utter_ask_institution
