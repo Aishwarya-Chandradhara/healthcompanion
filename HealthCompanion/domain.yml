@@ -142,7 +142,7 @@ responses:
     - text: "I will do this right away!"
     - text: "I am performing the requested information at the moment. Please be patient."
    utter_give_info_institution:
-    - text: "It's a {institution_type}, the adress is {institut_adress}, and their phone number is {institution_phone}"
+    - text: "It's a {institution_type}, the adress is {institut_adress}, and their phone number is {institution_phone} and it is {appointment_status}"
 
 
 actions:
