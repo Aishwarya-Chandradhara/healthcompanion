@@ -80,7 +80,7 @@
  - utter_ask_location
 * inform{"contact_location":"Berlin"}
  - utter_on_it
- - utter_askdate_and_time
+ - utter_ask_date_and_time
 * inform{"date":"13 Sep", "time": "09:30"}
  - utter_on_it
  - utter_ask_moreupdates
@@ -110,7 +110,7 @@
  - utter_ask_location
 * inform{"contact_location":"Amsterdam"}
  - utter_on_it
- - utter_askdate_and_time
+ - utter_ask_date_and_time
 * inform{"date":"9 Sep", "time": "10 am"}
  - utter_on_it
  - utter_ask_moreupdates
