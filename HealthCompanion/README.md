@@ -6,7 +6,7 @@ of how to use Rasa directly from your python code.
 ## What’s inside this example?
 
 This example contains some training data and the main files needed to build an 
-assistant on your local machine. The `restaurantbot` consists of the following files:
+assistant on your local machine. The `HCBot` consists of the following files:
 
 - **data/nlu.md** contains training examples for the NLU model  
 - **data/stories.md** contains training stories for the Core model  
