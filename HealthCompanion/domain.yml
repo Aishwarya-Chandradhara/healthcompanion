@@ -43,7 +43,8 @@ entities:
 - institution_type
 - institution_address
 - institution_phone
-- institution_location
+- institution_name
+- appointment_status
 
 intents:
  - greet
