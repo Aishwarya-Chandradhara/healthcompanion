@@ -47,6 +47,8 @@
 - i need help for my diagnose
 - i am sick, but dont know from what
 - can you tell me what i am sick from
+- what are my results
+- what is my diagnoses
 
 ## intent:make_appointment
 - i want to make an appointment
@@ -57,6 +59,19 @@
 - i want to go to a clinic
 - i want to go to a pharmacy
 - is there a pharmacy nearby
+- when is it available?
+- is it free
+- when will it be available
+- can you tell me when is there a free time slot
+- what time would be better
+- what time would be appropriate
+- what time is free
+- when will there be appointments
+- when are the appointments going to be available
+- what would be a free time slot
+- can i make an appointment on the [10th of Feb](date)
+- is the [23.01](date) free for an appointment
+- i want to make an appointment for [10:30](time)
 
 ## intent:deny
 - no
@@ -167,20 +182,6 @@
 - what is the address of the clinic
 - what is the name of the clinic
 - what is the status
-- what are my results
-- what is my diagnoses
-- when is it available?
-- is it free
-- when will it be available
-- can you tell me when is there a free time slot
-- what time would be better
-- what time would be appropriate
-- what time is free
-- when will there be appointments
-- when are the appointments going to be available
-- what would be a free time slot
-- can i make an appointment on the 10th of Feb
-- is the 23.01 free for an appointment
 
 ## intent:thankyou
 - um thank you good bye
