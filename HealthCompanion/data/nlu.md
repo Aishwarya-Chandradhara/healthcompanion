@@ -207,3 +207,14 @@
 - uh okay thank you good bye
 - thank you bye
 - um okay thank you good bye
+
+## intent:search_institution
+- Can you look for a [hospital](institution_type) near me?
+- Find me a [hospital](institution_type) near me?
+- Do you know any [hospital](institution_type) near me?
+- Which is the nearest [hospital](institution_type)?
+- Suggest me a good [pharmacy](institution_type).
+- I need to look for a nearby [pharmacy](institution_type).
+- Find me a good [pharmacy](institution_type).
+- Tell me the nearest [pharmacy](institution_type).
+- I need to see a Doctor. Suggest me one.
