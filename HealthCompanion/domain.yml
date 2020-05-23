@@ -42,7 +42,6 @@ entities:
 - contact_gender
 - date
 - time
-- allergies
 - symptom1
 - symptom2
 - symptom3
@@ -62,6 +61,7 @@ intents:
  - request_info
  - make_appointment
  - check_availability
+ - get_diagnose
 
 responses:
   utter_greet:
