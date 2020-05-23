@@ -4,13 +4,18 @@ from rasa_sdk.events import SlotSet
 
 class GE_API:
     def search(self, institution_type, location):
+        
+        app_start = "ExampleAvailableTimeSlot"  #Appointment.start
+        
+        if institution_type= "pharmacy":
+            loc = "Example Pharmacy Adress"     #location.adress['description']
+                                                #Appointment.status = "proposed"
+        else:  
+            loc = "Example Clinic or Hospital Adress"        
 
-        Appointment.status = "proposed"
-        location.adress['description']
+        return [SlotSet("location_institution", loc), SlotSet("date", app_start)]
 
-        return [SlotSet("location_institution", Location.Adress['description']), SlotSet("date_and_time", Appointment.start)]
-
-class ActionSearchInstitution(Action):
+class ActionSearchPharmacy(Action):
     def name(self):
         return "action_search_pharmacy"
 
