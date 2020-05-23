@@ -78,25 +78,22 @@ responses:
     - text: "Ciao Ciao!"
     - text: "Gotta go!"
   utter_default:
-    - text: "I am your HealthCompanion and I love you!"
+    - text: "I am your Health Companion and I love you!"
     - text: "This is your Health Companion and I am happy to help!"
     - text: "Isn't it great to have me at your assistance. How can I help you?"
-  utter_ask_details:
-    - text: "Can you tell me your details?"
-    - text: "Please tell me you name, phone number, age and gender."
-    - text: "Please share your details."
-  utter_ack_dosearch:
-    - text: "ok let me see what I can find"
+  utter_ack_search:
+    - text: "Ok let me see what I can find"
     - text: "Let me do my search and see what I find."
     - text: "Be right back with some relevant search resuts."
   utter_ack_findalternatives:
     - text: "ok let me see what else there is"
     - text: "May I interest you in some other alternatives??"
   utter_ack_makeappointment:
-    - text: "ok making an appointment for an institution= ({institution_name}) in location={institution_address} for time slot={time} on {date}? "
-      buttons:
-        - title: "thank you"
-          payload: "thank you"
+    - text: "Making an appointment for the institution= ({institution_name}) in location={institution_address} on {date} at time slot={time}"
+  utter_ask_details:
+    - text: "Can you tell me your details?"
+    - text: "Please tell me you name, phone number, age and gender."
+    - text: "Please share your details."
   utter_ask_institution:
     - text: "what kind of medical institution are you looking for?"
     - text: "Are you looking for a Hospital or Clinic or something else?"
