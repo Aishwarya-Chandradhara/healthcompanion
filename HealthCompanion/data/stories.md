@@ -42,3 +42,10 @@
  - action_greet_user
 * thankyou
  - utter_goodbye
+
+
+## story_000000002
+* greet
+ - utter_greet
+ - utter_howcanhelp
+* 
