@@ -1,0 +1,90 @@
+slots:
+  institution_type:
+    type: text
+  symptom:
+    type: text
+  people:
+    type: text
+  location:
+    type: text
+  info:
+    type: text
+  matches:
+    type: unfeaturized
+
+entities:
+- location
+- date_and_time
+- contact_name
+- contact_age
+- phone_number
+- allergy_status
+- symptom
+
+intents:
+ - greet
+ - affirm
+ - get_diagnose
+ - deny
+ - inform
+ - thankyou
+ - request_info
+ - check_availability
+
+responses:
+  utter_greet:
+    - text: "hey there!"
+    - text: "hola hola sick person"
+  utter_goodbye:
+    - text: "goodbye :("
+    - text: "Bye-bye"
+  utter_default:
+    - text: "I am your HealthCompanion and I love you!"
+  utter_diagnose:
+    - text: " "
+  utter_ack_dosearch:
+    - text: "ok let me see what I can find"
+  utter_ack_findalternatives:
+    - text: "ok let me see what else there is"
+  utter_ack_makeappointment:
+    - text: "ok making an appointment for an institution (={type_of_institution}) visit cuisine={cuisine}) in location={location} for time slot={time_and_date}? "
+      buttons:
+        - title: "thank you"
+          payload: "thank you"
+  utter_ask_institution:
+    - text: "what kind of medical institution are you looking for?"
+  utter_ask_howcanhelp:
+    - text: "how can I help you?"
+  utter_ask_location:
+    - text: "where?"
+    - text: "where exactly?"
+  utter_ask_moreupdates:
+    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {location}, {type_of_institution}, {time}."
+  utter_ask_date_and_time:
+    - text: "What day and time?"
+    - text: "When?"
+  utter_ask_name:
+    - text: "What is your name?"
+    - text: "Whats your name?"
+    - text: "Can you give me your name?"
+  utter_ask_age:
+    - text: "How old are you?"
+  utter_ask_phone_number:
+    - text: "What is your phone number?"
+    - text: "Can you give me your phone number?"
+    - text: "On which number can we reach you?"
+  utter_on_it:
+    - text: "I'm on it"
+    - text: "Doing it right now."
+
+actions:
+- action_search_pharmacy
+- action_search_hospital
+- action_search_generalpractioner
+- action_search_specialist
+- action_suggest
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true
+  
