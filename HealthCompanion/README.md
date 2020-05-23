@@ -1,4 +1,4 @@
-# Restaurant Bot
+# HealthCompanion
 
 This example includes a file called `run.py`, which contains an example
 of how to use Rasa directly from your python code.
