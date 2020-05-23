@@ -19,7 +19,7 @@
  - utter_on_it
  - utter_ask_moreupdates
 * deny
- - utter_ack_dosearch
+ - utter_ack_search
 * affirm
  - utter_ack_makeappointment
 * thankyou
@@ -86,7 +86,7 @@
  - utter_ask_moreupdates
 * deny
  - utter_ack_makeappointment
- - utter_ack_dosearch
+ - utter_ack_search
  - action_make_appointment
 * thankyou
  - utter_goodbye
