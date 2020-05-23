@@ -178,7 +178,7 @@ class ActionAnalyseSymptoms(Action):
         allergies = tracker.get_slot("allergies")
         contact_name = tracker.get_slot("contact_name")
 
-        diagnose_symptoms(symptom1, symptom2, symptom3, allergies, dispatcher)
+        diagnosis_results = diagnose_symptoms(symptom1, symptom2, symptom3, allergies, dispatcher)
 
         dispatcher.utter_messege(text="Hey {}, {}".format(contact_name, diagnosis_results))
 
