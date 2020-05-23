@@ -21,6 +21,9 @@ entities:
 - allergy_status
 - symptom
 - institution_type
+- adress_institution
+- phone_number_institution
+- location_institution
 
 intents:
  - greet
@@ -78,7 +81,7 @@ responses:
     - text: "where exactly?"
     - text: "At what location?"
   utter_ask_moreupdates:
-    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {location}, {type_of_institution}, {time}."
+    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {location_institution}, {type_of_institution}, {time_and_date}."
   utter_ask_date_and_time:
     - text: "What day and time?"
     - text: "When?"
@@ -109,6 +112,8 @@ responses:
     - text: "Doing it right now."
     - text: "I will do this right away!"
     - text: "I am performing the requested information at the moment. Please be patient."
+   utter_request_info_institution:
+    - text: "The adress is {adress_institution}, their phone number is {phone_number_institution}, located at {location_institution}"
 
 actions:
 - action_search_pharmacy
