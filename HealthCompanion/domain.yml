@@ -16,26 +16,29 @@ slots:
 
 
 entities:
-- location
-- date_and_time
+- contact_location
 - contact_name
 - contact_age
-- phone_number
+- contact_phone
+- contact_gender
+- date_and_time
 - allergy_status
-- symptom
+- symptom1
+- symptom2
+- symptom3
 - institution_type
-- adress_institution
-- phone_number_institution
-- location_institution
+- institution_address
+- institution_phone
+- institution_location
 
 intents:
  - greet
  - affirm
- - get_diagnose
  - deny
  - inform
  - thankyou
  - request_info
+ - make_appointment
  - check_availability
 
 responses:
