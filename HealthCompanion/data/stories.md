@@ -67,7 +67,7 @@
 * affirm
  - utter_goodbye
 
-## story_00000004
+## story_00000003
 * greet
  - action_greet_user
  - utter_ask_howcanhelp
@@ -90,3 +90,34 @@
  - action_make_appointment
 * thankyou
  - utter_goodbye
+
+## story_0000000004
+* greet
+ - utter_default
+ - utter_ask_howcanhelp
+* get_diagnose
+ - utter_on_it
+ - utter_ask_symptoms
+* inform{"symptom1": "cough", "symptom2": "fever", "symptom3": "rash"}
+ - utter_on_it
+ - action_analyse_symptoms
+* affirm
+* make_appointment
+ - utter_ask_details
+* inform{"contact_name": "Amy", "contact_age": "17", "contact_gender": "female", "contact_phone": "6323784234128"}
+ - utter_ask_institution
+* inform{"institution_type":"hospital"}
+ - utter_ask_location
+* inform{"contact_location":"Amsterdam"}
+ - utter_on_it
+ - utter_askdate_and_time
+* inform{"date":"9 Sep", "time": "10 am"}
+ - utter_on_it
+ - utter_ask_moreupdates
+* deny
+ - utter_ack_makeappointment
+ - utter_ack_dosearch
+ - action_make_appointment
+* thankyou
+ -utter_goodbye
+ 
