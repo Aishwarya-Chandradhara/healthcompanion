@@ -127,10 +127,12 @@
 * greet
  - utter_greet
  - utter_howcanhelp
-* request_info_prior
+* search_institution
  -  utter_ask_institution
 * inform{"institution_type":"pharmacy"}
  - utter_on_it
+ - utter_ask_location
+* inform{"contact_location":"Paderborn"}
  - action_search_institution
 * thankyou
  - utter_goodbye
