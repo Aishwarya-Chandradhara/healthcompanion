@@ -46,7 +46,7 @@ class ActionAppointment(Action):
         
         
 class ActionGreetUser(Action):
-    """Greets the user with/without privacy policy"""
+    """Greets the user using his name"""
 
     def name(self) -> Text:
         return "action_greet_user"
