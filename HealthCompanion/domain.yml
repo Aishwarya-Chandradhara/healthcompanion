@@ -146,6 +146,7 @@ actions:
 - action_suggest
 - action_make_appointment
 - action_analyse_symptoms
+- action_greet_user
 
 session_config:
   session_expiration_time: 60  # value in minutes

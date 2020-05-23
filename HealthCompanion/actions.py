@@ -3,19 +3,25 @@ from rasa_sdk.events import SlotSet
 
 
 class GE_API:
-    def search(self, institution_type, contact_location):
+    def search(self, institution_type, institution_location, contact_location, time=None, date=None, ):
         
-        app_start = "ExampleAvailableTimeSlot"  #Appointment.start
-        app_status = "ExampleAppointmentStatus" #Appointment.status
-        app_patient_status = "ExampleAccepted" #Appointment.patient.status
+        appointment_time = time  #Appointment.start
+        appointment_status = "pending" #Appointment.status
         
         if institution_type= "pharmacy":
-            loc = "Example Pharmacy Adress"     #location.adress['description']
-                                                #Appointment.status = "proposed"
-        else:  
-            loc = "Example Clinic or Hospital Adress"        
-
-        return [SlotSet("location_institution", loc), SlotSet("date", app_start)]
+            # suggest a pharmacy in the proximity to contact_location
+            institution_name = "City Pharmacy"
+            appointment_status = "not needed"
+            institution_address = "City Strasse, Paderborn"
+            institution_phone = "12323457890"
+            return [SlotSet("institution_name", institution_name), SlotSet("institution_address", institution_address), SlotSet("institution_phone", institution_phone), SlotSet("appointment_status", appointment_status)]
+        else:
+            # for all other institutions
+            institution_name = "City Hospital"
+            appointment_status = "pending"
+            institution_address = "City Strasse, Paderborn"
+            institution_phone = "12332227890"
+            return [SlotSet("institution_name", institution_name), SlotSet("institution_address", institution_address), SlotSet("institution_phone", institution_phone), SlotSet("appointment_status", appointment_status)]
 
 class ActionSearchPharmacy(Action):
     def name(self):
@@ -41,10 +47,26 @@ class ActionAppointment(Action):
     def name(self):
         return "action_appointment"
 
-    def run(self, date_and_time, contact_name, contact_age, ):
+    def run(self, dispatcher, tracker, domain)-> List[EventType]:
         
-        
-        
+class ActionAnalyseSymptoms(Action):
+    def name(self):
+        return "action_analyse_symptoms"
+    
+    def run(self, dispatcher, tracker, domain)-> List[EventType]:
+        # symptom1 = tracker.get_latest_entity_values("symptom1")
+        # symptom2 = tracker.get_latest_entity_values("symptom2")
+        # symptom3 = tracker.get_latest_entity_values("symptom3")
+        # analysis_inputs = [symptom1, symptom2, symptom3]
+        # outputs = analysis_tool(analysis_inputs)
+        output = "mild cold"
+        dispatcher.utter_messege(text = "well,")
+        dispatcher.utter_messege(text = tracker.get_latest_entity_values("contact_name"))
+        dispatcher.utter_messege(text = "you might have")
+        dispatcher.utter_messege(text = output)
+        dispatcher.utter_messege(text = "However, we still highly recommend that you go visit a specialist. As we are not legally allowed to give diagnoses."
+        return []
+                                 
 class ActionGreetUser(Action):
     """Greets the user using his name"""
 
