@@ -116,7 +116,7 @@
  - utter_ask_moreupdates
 * deny
  - utter_ack_makeappointment
- - utter_ack_dosearch
+ - utter_ack_search
  - action_make_appointment
 * thankyou
  - utter_goodbye
