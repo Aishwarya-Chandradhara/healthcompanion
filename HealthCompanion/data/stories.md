@@ -119,5 +119,5 @@
  - utter_ack_dosearch
  - action_make_appointment
 * thankyou
- -utter_goodbye
+ - utter_goodbye
  
