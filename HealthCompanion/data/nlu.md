@@ -41,6 +41,20 @@
 - what could my diagnose be?
 - do you know what is wrong with me?
 
+## intent:make_appointment
+- I want an appointment.
+- Can I meet the doctor?
+- I wish to see the doctor.
+- May I get a Termin?
+- I need medical assistance.
+- I need to see a professional doctor.
+- I want to come meet the doctor.
+- Can I get a checkup from the doctor?
+- When can I come to meet the doctor?
+- Can you please provide an appointment?
+- How can I make an appointment?
+- Is it possible to see the doctor?
+
 ## intent:deny
 - no
 - no thanks
