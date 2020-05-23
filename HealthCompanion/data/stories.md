@@ -32,7 +32,7 @@
 * get_diagnose
  - utter_on_it
  - utter_ask_symptoms
-* inform{"symptom1": "fever", "symptom2": "stomach aches", "symptom3": "sore muscles"}
+* inform{"symptom1": "Cough", "symptom2": "Headache", "symptom3": "Fever"}
  - utter_on_it
  - utter_ask_details
 * inform{"contact_name": "Utsav", "contact_age": "26", "contact_gender": "Male", "contact_phone": "45221330034"}
@@ -98,7 +98,7 @@
 * get_diagnose
  - utter_on_it
  - utter_ask_symptoms
-* inform{"symptom1": "cough", "symptom2": "fever", "symptom3": "rash"}
+* inform{"symptom1": "Nausea", "symptom2": "Bloating", "symptom3": "Abdominal pain"}
  - utter_on_it
  - action_analyse_symptoms
 * affirm
