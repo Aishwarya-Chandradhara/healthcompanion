@@ -3,39 +3,35 @@ from rasa_sdk.events import SlotSet
 
 
 class GE_API:
-    def search(self, info):
-        return "pharmacyLocation, etc."
+    def search(self, institution_type, location):
 
+        Appointment.status = "proposed"
+        location.adress['description']
 
-class ActionSearchPharmacy(Action):
+        return [SlotSet("location_institution", Location.Adress['description']), SlotSet("date_and_time", Appointment.start)]
+
+class ActionSearchInstitution(Action):
     def name(self):
         return "action_search_pharmacy"
 
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message(text="looking for a pharmacy near you")
-        restaurant_api = GE_API()
-        restaurants = restaurant_api.search(tracker.get_slot("pharmacy"))
-        return [SlotSet("matches", restaurants)]
+        ge_api = GE_API()
+        pharmacy = ge_api.search(tracker.get_slot("location_institution"))
+        return [SlotSet("location_institution", pharmacy)]
 
 class ActionSearchClinic(Action):
     def name(self):
-        return "action_search_pharmacy"
+        return "action_search_doctor"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message(text="looking for a pharmacy near you")
-        restaurant_api = GE_API()
-        restaurants = restaurant_api.search(tracker.get_slot("pharmacy"))
-        return [SlotSet("matches", restaurants)]
+        dispatcher.utter_message(text="looking for a doctor near you")
+        ge_api = GE_API()
+        clinic = ge_api.search(tracker.get_slot("pharmacy"))
+        return [SlotSet("location_institution", clinic)]
 
-
-class ActionSuggest(Action):
+class ActionAppointment(Action):
     def name(self):
-        return "action_suggest"
+        return "action_appointment"
 
-    def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message(text="here's what I found:")
-        dispatcher.utter_message(text=tracker.get_slot("matches"))
-        dispatcher.utter_message(
-            text="is it ok for you? hint: I'm not going to find anything else :)"
-        )
-        return []
+    def run(self, date_and_time, contact_name, contact_age, ):
