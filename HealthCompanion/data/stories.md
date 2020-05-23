@@ -1,3 +1,30 @@
+## story_00000000
+* greet
+ - utter_greet
+ - utter_default
+ - utter_ask_name
+* inform{"contact_name":"nikhil"}
+ - utter_on_it
+ - utter_ask_howcanhelp
+* inform{"institution_type":"hospital"}
+ - utter_on_it
+ - utter_ask_location
+* inform{"location_institution":"Paderborn"}
+ - utter_on_it
+ - utter_askdate_and_time
+* inform{"date_and_time":"28 May at 10 AM"}
+ - utter_on_it
+ - utter_ask_moreupdates
+* deny
+ - utter_ack_dosearch
+* affirm
+ - utter_ack_makeappointment
+* thankyou
+ - utter_goodbye
+
+
+
+
 ## story_00914561
 * greet
  - utter_ask_howcanhelp
