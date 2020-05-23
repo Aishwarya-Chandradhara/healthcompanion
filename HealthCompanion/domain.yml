@@ -146,11 +146,7 @@ responses:
     - text: "The adress is {adress_institution}, their phone number is {phone_number_institution}, located at {location_institution}"
 
 actions:
-- action_search_pharmacy
-- action_search_hospital
-- action_search_generalpractioner
-- action_search_specialist
-- action_suggest
+- action_search_institution
 - action_make_appointment
 - action_analyse_symptoms
 - action_greet_user
