@@ -30,34 +30,19 @@
 
 ## story_00914561
 * greet
+ - utter_default
  - utter_ask_howcanhelp
-* inform{"cuisine": "italian"}
+* get_diagnose
  - utter_on_it
- - utter_ask_location
-* inform{"location": "paris"}
- - utter_ask_numpeople
-* inform{"people": "six"}
- - utter_ask_price
-* inform{"price": "cheap"}
- - utter_ask_moreupdates
-* inform{"people": "two"}
- - utter_ask_moreupdates
-* inform{"location": "madrid"}
- - utter_ask_moreupdates
-* inform{"cuisine": "spanish"}
- - utter_ask_moreupdates
-* deny
- - utter_ack_dosearch
- - action_search_restaurants
- - action_suggest
-* deny
- - utter_ack_findalternatives
- - action_suggest
-* deny
- - utter_ack_findalternatives
- - action_suggest
+ - utter_ask_symptoms
+* inform{"symptom1": "fever", "symptom2": "stomach aches", "symptom3": "sore muscles"}
+ - utter_on_it
+ - utter_ask_details
+* inform{"contact_name": "Utsav", "contact_age": "26", "contact_gender": "Male", "contact_phone": "45221330034"}
+ - utter_on_it
+ - action_try_to_diagnose
 * affirm
- - utter_ack_makereservation
+ - action_greet
 * thankyou
  - utter_goodbye
 
