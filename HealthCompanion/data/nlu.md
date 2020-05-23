@@ -180,7 +180,7 @@
 - what is the [address](institution_address) of the [clinic](institution_type)
 - what is the [name](institution_name) of the [clinic](institution_type)
 - can you tell me the [appointment status](appointment_status)
-- what is the [status](appointment_status]
+- what is the [status](appointment_status)
 - what are my [results](diagnoses_results)
 - what is my [diagnosis](diagnoses_results)
 
