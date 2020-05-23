@@ -206,6 +206,10 @@ class ActionGreetUser(Action):
         contact_name = tracker.get_slot("contact_name")
         contact_gender = tracker.get_slot("contact_gender")
 
+        if contact_name is None or contact_gender is None:
+            greeting = "Hello, Good day!"
+            return [SlotSet("greeting", greeting)]
+
         greeting = greet_user(contact_gender, contact_name)
 
         return [SlotSet("greeting", greeting)]
