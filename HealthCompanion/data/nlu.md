@@ -40,6 +40,38 @@
 - can you give me a diagnose?
 - what could my diagnose be?
 - do you know what is wrong with me?
+- i need to be diagnosed.
+- can you give me a diagnose?
+- can you tell me what is wrong with me?
+- how sick am I?
+- i need help for my diagnose
+- i am sick, but dont know from what
+- can you tell me what i am sick from
+
+## intent:make_appointment
+- i want to make an appointment
+- i want to make an appointment on the [25.03](date) at [15pm](time)
+- i want to make an appointment for [15 March](date) around [2pm](time)
+- can i make an appointment
+- i want to see a doctor
+- i want to go to a clinic
+- i want to go to a pharmacy
+- is there a pharmacy nearby
+
+## intent:check_availability
+- when is it available?
+- is it free
+- when will it be available
+- can you tell me when is there a free time slot
+- what time would be better
+- what time would be appropriate
+- what time is free
+- when will there be appointments
+- when are the appointments going to be available
+- what would be a free time slot
+- can i make an appointment on the [10.02](time) 
+- is the [23.01](time) free for an appointment
+
 
 ## intent:deny
 - no
@@ -130,22 +162,27 @@
 - i come from [Germany](contact_location)
 
 ## intent:request_info
-- do you have their [address](address_institution)
-- do you have its [phone number](phone_number_institution)
-- can i have their [phone number](phone_number_institution)
-- what is the [phone number](phone_number_institution) of the [hospital](institution_type)
-- what is their [address](address_institution)
-- may i have the [address](address_institution) of the [pharmacy](institution_type)
-- whats their [address](address_institution)
+- do you have their [address](institution_address)
+- do you have its [phone number](institution_phone)
+- can i have their [phone number](institution_phone)
+- what is the [phone number](institution_phone) of the [hospital](institution_type)
+- what is their [address](institution_address)
+- may i have the [address](institution_address) of the [pharmacy](institution_type)
+- whats their [address](institution_address)
 - do you have their [phone number](phone_number_institution)
 - give me their [phone number](phone_number_institution)
 - whats their [phone number](phone_number_institution)
-- do you have its [address](address_institution)
-- may i have the [phone number](phone_number_institution) of the [doctor](institution_type)
-- what is their [phone number](phone_number_institution)
-- give me their [address](address_institution)
-- can i have their [address](address_institution)
-- what is the [address](address_institution) of the [clinic](institution_type)
+- do you have its [address](institution_address)
+- may i have the [phone number](institution_phone) of the [doctor](institution_type)
+- what is their [phone number](institution_phone)
+- give me their [address](institution_address)
+- can i have their [address](institution_address)
+- what is the [address](institution_address) of the [clinic](institution_type)
+- what is the [name](institution_name) of the [clinic](institution_type)
+- can you tell me the [appointment status](appointment_status)
+- what is the [status](appointment_status]
+- what are my [results](diagnoses_results)
+- what is my [diagnosis](diagnoses_results)
 
 ## intent:thankyou
 - um thank you good bye
