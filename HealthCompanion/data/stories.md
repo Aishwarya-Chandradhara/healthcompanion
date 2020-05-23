@@ -133,6 +133,7 @@
  - utter_on_it
  - utter_ask_location
 * inform{"contact_location":"Paderborn"}
+ - utter_on_it
  - action_search_institution
 * thankyou
  - utter_goodbye
