@@ -3,14 +3,17 @@ slots:
     type: text
   symptom:
     type: text
-  people:
+  location_institution:
     type: text
   location:
     type: text
-  info:
+  adress_institution:
     type: text
-  matches:
-    type: unfeaturized
+  phone_number_institution:
+    type: text
+  date_and_time:
+    type: text
+
 
 entities:
 - location
@@ -20,6 +23,10 @@ entities:
 - phone_number
 - allergy_status
 - symptom
+- institution_type
+- adress_institution
+- phone_number_institution
+- location_institution
 
 intents:
  - greet
@@ -34,48 +41,82 @@ intents:
 responses:
   utter_greet:
     - text: "hey there!"
-    - text: "hola hola sick person"
+    - text: "hola hola!"
+    - text: "Hi there. Good day!"
+    - text: "Hello. I hope you are doing great today."
   utter_goodbye:
     - text: "goodbye :("
     - text: "Bye-bye"
+    - text: "See you later!"
+    - text: "Ciao Ciao!"
+    - text: "Gotta go!"
   utter_default:
     - text: "I am your HealthCompanion and I love you!"
+    - text: "This is your Health Companion and I am happy to help!"
+    - text: "Isn't it great to have me at your assistance. How can I help you?"
   utter_diagnose:
     - text: " "
   utter_ack_dosearch:
     - text: "ok let me see what I can find"
+    - text: "Let me do my search and see what I find."
+    - text: "Be right back with some relevant search resuts."
   utter_ack_findalternatives:
     - text: "ok let me see what else there is"
+    - text: "May I interest you in some other alternatives??"
   utter_ack_makeappointment:
-    - text: "ok making an appointment for an institution (={type_of_institution}) visit cuisine={cuisine}) in location={location} for time slot={time_and_date}? "
+    - text: "ok making an appointment for an institution ({type_of_institution}) in location={location_institution} for time slot={time_and_date}? "
       buttons:
         - title: "thank you"
           payload: "thank you"
   utter_ask_institution:
     - text: "what kind of medical institution are you looking for?"
+    - text: "Are you looking for a Hospital or Clinic or something else?"
+    - text: "Where do you wish to go to - Hospital or Clinic or Pharmacy?"
+    - text: "To be specific - Which type of medical institution?"
   utter_ask_howcanhelp:
     - text: "how can I help you?"
+    - text: "How can I be of your assistance?"
+    - text: "With what can I help you today?"
+    - text: "Do you need any help from me?"
+    - text: "Please let me know how can I help you?"
   utter_ask_location:
     - text: "where?"
     - text: "where exactly?"
+    - text: "At what location?"
   utter_ask_moreupdates:
-    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {location}, {type_of_institution}, {time}."
+    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {location_institution}, {type_of_institution}, {time_and_date}."
   utter_ask_date_and_time:
     - text: "What day and time?"
     - text: "When?"
+    - text: "Can you tell me the date and time?"
+    - text: "For what date and time?"
+    - text: "When exactly?"
   utter_ask_name:
     - text: "What is your name?"
     - text: "Whats your name?"
     - text: "Can you give me your name?"
+    - text: "What should I call you?"
+    - text: "Can you please tell me your name?"
+    - text: "Will you care to tell me your name?"
   utter_ask_age:
     - text: "How old are you?"
+    - text: "What should your age be?"
+    - text: "Can you tell me your age?"
+    - text: "How old were you, again?"
+    - text: "Maybe I forgot your age. How old were you again?"
   utter_ask_phone_number:
     - text: "What is your phone number?"
     - text: "Can you give me your phone number?"
     - text: "On which number can we reach you?"
+    - text: "Please provide a phone number to reach you."
+    - text: "Will you care to provide a working phone number to contact you?"
   utter_on_it:
     - text: "I'm on it"
     - text: "Doing it right now."
+    - text: "I will do this right away!"
+    - text: "I am performing the requested information at the moment. Please be patient."
+   utter_request_info_institution:
+    - text: "The adress is {adress_institution}, their phone number is {phone_number_institution}, located at {location_institution}"
 
 actions:
 - action_search_pharmacy
@@ -83,8 +124,9 @@ actions:
 - action_search_generalpractioner
 - action_search_specialist
 - action_suggest
+- action_make_appointment
+- action_analyse_symptoms
 
 session_config:
   session_expiration_time: 60  # value in minutes
   carry_over_slots_to_new_session: true
-  
