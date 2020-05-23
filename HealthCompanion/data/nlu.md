@@ -41,7 +41,7 @@
 - what could my diagnose be?
 - do you know what is wrong with me?
 
-## intent:make_appointment
+## intent:makeAppointment
 - I want an appointment.
 - Can I meet the doctor?
 - I wish to see the doctor.
@@ -54,6 +54,12 @@
 - Can you please provide an appointment?
 - How can I make an appointment?
 - Is it possible to see the doctor?
+- I need an appointment for [28 May at 10 AM](date_an_time).
+- Can I get an appointment in [Paderborn](location)?
+- I wish to see a doctor on [28 May at 11 AM](date_and_time) for my [rashes](sumptoms).
+- Is it possible to see a dcotor in [Aachen](location) [hospital](institution_type)?
+- I want to see a doctor in the [Aachen](location).
+- May I get an appointment to get my [fever](symptom) checked?
 
 ## intent:deny
 - no
