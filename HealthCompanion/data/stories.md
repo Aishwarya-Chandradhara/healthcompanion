@@ -44,7 +44,7 @@
  - utter_goodbye
 
 
-## story_000000002
+## story_00000002
 * greet
  - utter_greet
  - utter_howcanhelp
@@ -91,7 +91,7 @@
 * thankyou
  - utter_goodbye
 
-## story_0000000004
+## story_00000004
 * greet
  - utter_default
  - utter_ask_howcanhelp
@@ -121,3 +121,16 @@
 * thankyou
  - utter_goodbye
  
+
+
+## story_00000005
+* greet
+ - utter_greet
+ - utter_howcanhelp
+* request_info_prior
+ -  utter_ask_institution
+* inform{"institution_type":"pharmacy"}
+ - utter_on_it
+ - action_search_institution
+* thankyou
+ - utter_goodbye
