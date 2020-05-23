@@ -37,7 +37,7 @@
  - utter_ask_details
 * inform{"contact_name": "Utsav", "contact_age": "26", "contact_gender": "Male", "contact_phone": "45221330034"}
  - utter_on_it
- - action_try_to_diagnose
+ - action_analyse_symptoms
 * affirm
  - action_greet_user
 * thankyou
