@@ -62,10 +62,10 @@
 * greet
  - utter_ask_howcanhelp
 * search_institution
- - utter_ask_location
-* inform{"contact_location":"Dubai"}
  - utter_ask_institution
 * inform{"institution_type":"Doctor"}
+ - utter_ask_location
+* inform{"contact_location":"Dubai"}
  - action_search_institution
  - slot{"institution_name": "Doctor Abdul Jabaar"}
  - slot{"institution_address": "ArabianRanches 43, Dubai"}
