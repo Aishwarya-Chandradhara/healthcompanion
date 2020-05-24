@@ -40,7 +40,7 @@ responses:
       text: May I interest you in some other alternatives??
   utter_ack_makeappointment: 
     - 
-      text: "Making an appointment for the institution={institution_name} in location={institution_address} on date={date} at time={time}"
+      text: "Making an appointment on date={date} at time={time}"
   utter_ack_search: 
     - 
       text: Ok let me see what I can find
