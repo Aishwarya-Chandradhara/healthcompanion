@@ -110,12 +110,10 @@
  - utter_greet
  - utter_ask_howcanhelp
 * search_institution
- - utter_on_it
  - utter_ask_institution
 * inform{"institution_type":"Clinic"}
  - utter_ask_location
 * inform{"contact_location":"Amsterdam"}
- - utter_on_it
  - action_search_institution
  - slot{"institution_name": "Clinic for the Diseased"}
  - slot{"institution_address": "Vondelparkstr 12, Amsterdam"}
@@ -130,7 +128,6 @@
  - utter_ask_symptoms
 * inform{"symptom1": "fever"}
 * inform{"symptom2": "headache"}
- - utter_on_it
  - action_analyse_symptoms
 * thankyou
  - utter_goodbye
