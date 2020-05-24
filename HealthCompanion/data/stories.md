@@ -60,7 +60,6 @@
 
  ## story_4
 * greet
- - utter_greet
  - utter_ask_howcanhelp
 * search_institution
  - utter_ask_location
@@ -76,7 +75,6 @@
 
 ## story_5
 * greet
- - utter_greet
  - utter_ask_howcanhelp
 * make_appointment
  - utter_ask_name
@@ -107,7 +105,6 @@
 
 ## story_6
 * greet
- - utter_greet
  - utter_ask_howcanhelp
 * search_institution
  - utter_ask_institution
