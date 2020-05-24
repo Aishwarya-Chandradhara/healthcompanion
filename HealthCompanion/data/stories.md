@@ -55,3 +55,34 @@
  - utter_ack_makeappointment
 * thankyou
  - utter_goodbye
+
+
+ ## story_5
+* greet
+ - utter_greet
+ - utter_ask_howcanhelp
+* make_appointment
+ - utter_ask_name
+* inform{"contact_name": "George"}
+ - utter_ask_phone_number
+* inform{"contact_phone": "388132398213"}
+ - utter_ask_gender
+* inform{"contact_gender": "Male"}
+ - utter_ask_age
+* inform{"contact_age": "45"}
+ - utter_ask_institution
+* inform{"institution_type":"Doctor"}
+ - utter_ask_location
+* inform{"contact_location":"Berlin"}
+ - utter_ask_date
+* inform{"date":"2 Jul"}
+ - utter_ask_time
+* inform{"time": "5 PM"}
+ - action_search_institution
+ - slot{"institution_name": "Dr Mueller"}
+ - slot{"institution_address": "Gassestr 14, Berlin"}
+ - slot{"institution_phone": "6123442412"}
+* affirm
+ - utter_ack_makeappointment
+* thankyou
+ - utter_goodbye
