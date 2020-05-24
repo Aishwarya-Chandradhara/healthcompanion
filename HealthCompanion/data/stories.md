@@ -134,3 +134,14 @@
  - action_analyse_symptoms
 * thankyou
  - utter_goodbye
+
+## story_8
+* greet
+ - utter_ask_howcanhelp
+* get_diagnose
+ - utter_ask_symptoms
+* inform{"symptom1": "bloating"}
+* inform{"symptom2": "nausea"}
+ - action_analyse_symptoms
+* thankyou
+ - utter_goodbye
