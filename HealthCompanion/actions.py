@@ -61,8 +61,8 @@ def diagnose_symptoms(symptom1, symptom2=None, symptom3=None, dispatcher=None):
     :return:
     """
     # symptom1 can't be empty or None
-    flu_symptoms = [None, "Headache", "Fever", "Chills", "Cough", "Sore Throat", "Runny Nose", "Fatigue"]
-    diarrhea_symptoms = [None, "Nausea", "Bloating", "Loose stools", "Abdominal pain", "Abdominal cramps"]
+    flu_symptoms = [None, "headache", "fever", "chills", "cough", "sore throat", "runny nose", "fatigue"]
+    diarrhea_symptoms = [None, "nausea", "bloating", "loose stools", "abdominal pain", "abdominal cramps"]
     diagnosis_results = "I am not sure. Please see a doctor!"
 
     if symptom1 in flu_symptoms[1:] and symptom2 in flu_symptoms and symptom3 in flu_symptoms:
