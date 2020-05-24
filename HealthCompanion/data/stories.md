@@ -129,8 +129,7 @@
 * get_diagnose
  - utter_ask_symptoms
 * inform{"symptom1": "fever"}
-* inform{"symptom1": "headache"}
-* inform{"institution_type":"Clinic"}
+* inform{"symptom2": "headache"}
  - utter_on_it
  - action_analyse_symptoms
 * thankyou
