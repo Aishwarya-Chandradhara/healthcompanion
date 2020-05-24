@@ -24,10 +24,11 @@
  - slot{"institution_phone": "1234568966"}
 * affirm
  - utter_ack_makeappointment
+ - action_make_appointment
 * thankyou
  - utter_goodbye
  
- ## story_2
+## story_2
 * greet
  - utter_ask_howcanhelp
 * make_appointment
@@ -53,6 +54,7 @@
  - slot{"institution_phone": "1234532326"}
 * affirm
  - utter_ack_makeappointment
+ - action_make_appointment
 * thankyou
  - utter_goodbye
 
@@ -65,7 +67,6 @@
 * inform{"contact_location":"Dubai"}
  - utter_ask_institution
 * inform{"institution_type":"Doctor"}
- - utter_on_it
  - action_search_institution
  - slot{"institution_name": "Doctor Abdul Jabaar"}
  - slot{"institution_address": "ArabianRanches 43, Dubai"}
@@ -73,7 +74,7 @@
 * thankyou
  - utter_goodbye
 
- ## story_5
+## story_5
 * greet
  - utter_greet
  - utter_ask_howcanhelp
@@ -100,10 +101,11 @@
  - slot{"institution_phone": "6123442412"}
 * affirm
  - utter_ack_makeappointment
+ - action_make_appointment
 * thankyou
  - utter_goodbye
 
- ## story_6
+## story_6
 * greet
  - utter_greet
  - utter_ask_howcanhelp
@@ -118,5 +120,18 @@
  - slot{"institution_name": "Clinic for the Diseased"}
  - slot{"institution_address": "Vondelparkstr 12, Amsterdam"}
  - slot{"institution_phone": "003618721992"}
+* thankyou
+ - utter_goodbye
+
+## story_7
+* greet
+ - utter_ask_howcanhelp
+* get_diagnose
+ - utter_ask_symptoms
+* inform{"symptom1": "fever"}
+* inform{"symptom1": "headache"}
+* inform{"institution_type":"Clinic"}
+ - utter_on_it
+ - action_analyse_symptoms
 * thankyou
  - utter_goodbye
