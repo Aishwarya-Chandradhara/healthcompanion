@@ -56,6 +56,22 @@
 * thankyou
  - utter_goodbye
 
+ ## story_4
+* greet
+ - utter_greet
+ - utter_ask_howcanhelp
+* search_institution
+ - utter_ask_location
+* inform{"contact_location":"Dubai"}
+ - utter_ask_institution
+* inform{"institution_type":"Doctor"}
+ - utter_on_it
+ - action_search_institution
+ - slot{"institution_name": "Doctor Abdul Jabaar"}
+ - slot{"institution_address": "ArabianRances 43, Dubai"}
+ - slot{"institution_phone": "00413256889003"}
+* thankyou
+ - utter_goodbye
 
  ## story_5
 * greet
