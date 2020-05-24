@@ -86,3 +86,29 @@
  - utter_ack_makeappointment
 * thankyou
  - utter_goodbye
+
+ ## story_6
+* greet
+ - utter_greet
+ - utter_ask_howcanhelp
+* search_institution
+ - utter_on_it
+ - utter_ask_name
+* inform{"contact_name": "Melinda"}
+ - utter_ask_gender
+* inform{"contact_gender": "Female"}
+ - utter_ask_phone_number
+* inform{"contact_phone": "09246308832"}
+ - utter_ask_age
+* inform{"contact_age": "55"}
+ - utter_ask_institution
+* inform{"institution_type":"Clinic"}
+ - utter_ask_location
+* inform{"contact_location":"Amsterdam"}
+ - utter_on_it
+ - action_search_institution
+ - slot{"institution_name": "Clinic for the Diseased"}
+ - slot{"institution_address": "Vondelparkstr 12, Amsterdam"}
+ - slot{"institution_phone": "003618721992"}
+* thankyou
+ - utter_goodbye
