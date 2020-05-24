@@ -119,6 +119,11 @@
 
 ## intent:inform
 - I am [Dimitar](contact_name)
+- on [28 march](date)
+- at [12 pm](time)
+- on [28 may](date)
+- at [9 am](time)
+- on [28 may](date) at [9 am](time)
 - I am [25](contact_age) years old.
 - i am [35](contact_age)
 - im [17](contact_age) yo
