@@ -218,3 +218,16 @@
 - Find me a good [pharmacy](institution_type).
 - Tell me the nearest [pharmacy](institution_type).
 - I need to see a Doctor. Suggest me one.
+- I am looking for a [doctor](institution_type).
+- Is there a [clinic](institution_type) near me?
+- Where can I find a [clinic](institution_type) in my city?
+- Are there any [clinics](institution_type) around me?
+- Are there any [doctors](institution_type) around me?
+- Are there any [hospitals](institution_type) around me?
+- Are there any [pharmacies](institution_type) around me?
+- I am looking for a [clinic](institution_type) somewhere here.
+- I am looking for a [doctor](institution_type) somewhere here.
+- Is there a [pharmacy](institution_type) in this city?
+- Is there a [clinic](institution_type) in this city?
+- Is there a [hospital](institution_type) in this city?
+- Is there a [pharmacy](institution_type) in this city?
