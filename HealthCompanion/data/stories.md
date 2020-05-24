@@ -68,7 +68,7 @@
  - utter_on_it
  - action_search_institution
  - slot{"institution_name": "Doctor Abdul Jabaar"}
- - slot{"institution_address": "ArabianRances 43, Dubai"}
+ - slot{"institution_address": "ArabianRanches 43, Dubai"}
  - slot{"institution_phone": "00413256889003"}
 * thankyou
  - utter_goodbye
